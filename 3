@@ -1,0 +1,62 @@
+//
+//  main.cpp
+//  Operations on matrices using C.
+//  addiiontion of square matrix two matrices.
+//  Created by JASHANPREET SINGH on 30/03/20.
+//  Copyright © 2020 JASHANPREET SINGH. All rights reserved.
+//
+
+#include <iostream>
+
+int main(){
+    
+    int MatrixA[10][10];
+    int i,j,r,c;
+    
+    /*enterting data for matrixA*/
+    printf("Enter the number of rows and coulmns for matrices\n");
+    scanf("%d%d",&r,&c);
+    
+    printf("Enter %d elements of matrixA:\n",r*c);
+    
+    for(i=0;i<r;i++)
+    {
+        for(j=0;j<c;j++)
+        { printf("The element entered at [%d][%d] index:",i,j);
+            scanf("%d",&MatrixA[i][j]);}
+        }
+    
+    
+    int MatrixB[10][10];
+    /*enterting data for matrixB*/
+      printf("Enter %d elements of matrixB:\n",r*c);
+       
+       for(i=0;i<r;i++)
+       {
+           for(j=0;j<c;j++)
+           { printf("The element entered at [%d][%d] index:",i,j);
+               scanf("%d",&MatrixB[i][j]);}
+           }
+    printf("MatrixA:\n");
+    for(i=0;i<r;i++)
+       {
+           for(j=0;j<c;j++)
+           { printf("\t%d",MatrixA[i][j]);}
+           printf("\n");
+           }
+    printf("MatrixB:\n");
+    for(i=0;i<r;i++)
+          {
+              for(j=0;j<c;j++)
+              { printf("\t%d",MatrixB[i][j]);}
+              printf("\n");
+              }
+    printf("MatrixA+B:\n");
+    for(i=0;i<r;i++)
+          {
+              for(j=0;j<c;j++)
+              { printf("\t%d",MatrixA[i][j]+MatrixB[i][j]);}
+              printf("\n");
+              }
+    
+    return 0;}
