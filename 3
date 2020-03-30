@@ -1,7 +1,7 @@
 //
 //  main.cpp
 //  Operations on matrices using C.
-//  addiiontion of square matrix two matrices.
+//  addition of two square matrices.
 //  Created by JASHANPREET SINGH on 30/03/20.
 //  Copyright © 2020 JASHANPREET SINGH. All rights reserved.
 //
@@ -12,7 +12,14 @@ int main(){
     
     int MatrixA[10][10];
     int i,j,r,c;
-    
+    top:
+    printf("Enter the number of rows and columns\n");
+    scanf("%d%d",&r, &c);
+    if(r>10 || c>10)
+   {  printf("The maximum rows and columns allowed are 10\n");
+    goto top;
+   }
+
     /*enterting data for matrixA*/
     printf("Enter the number of rows and coulmns for matrices\n");
     scanf("%d%d",&r,&c);
