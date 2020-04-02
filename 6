@@ -1,0 +1,86 @@
+//
+//  main.cpp
+//  Operations on matrices using C.
+//  matrix multiplication.
+//  Created by JASHANPREET SINGH on 30/03/20.
+//  Copyright © 2020 JASHANPREET SINGH. All rights reserved.
+//
+
+#include <iostream>
+
+int main(){
+    
+    int MatrixA[10][10];
+    int MatrixB[10][10];
+    int i,j,r1,c1,r2,c2;
+    
+    printf("Enter the number of columns for MatrixA\n");
+    scanf("%d",&c1);
+    printf("Enter the number of rows for MatrixB\n");
+    scanf("%d",&r2);
+    
+    if (c1!=r2)
+    {
+        printf("multiplication not possible\n");
+    }
+    else
+    {
+     //Enterting data for matrixA
+        printf("Enter the number of rows of matrixA\n");
+        scanf("%d",&r1);
+        
+        for(i=0;i<r1;i++)
+        {
+            for(j=0;j<c1;j++)
+            {printf("The element at MatrixA[%d][%d] position is\n",i,j);
+                scanf("%d",&MatrixA[i][j]);
+            }
+        }
+     
+        //Enterting data for matrixB
+           printf("\n\nEnter the number of columns of matrixB\n");
+           scanf("%d",&c2);
+           
+           for(i=0;i<r2;i++)
+           {
+               for(j=0;j<c2;j++)
+               {printf("The element at MatrixB[%d][%d] position is\n",i,j);
+                   scanf("%d",&MatrixB[i][j]);
+               }
+           }
+        
+        int MatrixAB[10][10];
+      
+       for (int i = 0; i < r1; ++i) {
+                for (int j = 0; j < c2; ++j) {
+                    for (int k = 0; k < c1; ++k) {
+                        MatrixAB[i][j] += MatrixA[i][k] * MatrixB[k][j];
+                    }
+                }
+       }
+        
+       
+        
+    
+    printf("The MatrixAB is:\n");
+        
+    for(i=0;i<r1;i++)
+    {
+        for(j=0;j<c2;j++)
+            
+        {
+            printf("\t%d\t",MatrixAB[i][j]);
+            
+            }
+        printf("\n");
+        
+    }
+        
+    }
+    return 0;
+}
+    
+    
+    
+    
+  
